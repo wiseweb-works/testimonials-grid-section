@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Font */
+  --font-family: "Barlow Semi Condensed", sans-serif;
+
+  /* Font Weights */
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* Primary Colors */
+  --moderate-violet: hsl(263, 55%, 52%);
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Neutral Colors */
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 13px;
+  width: 100%;
+  height: 100vh;
+  max-width: 1440px;
+  max-height: 900px;
+  margin: auto;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background-color: var(--light-grayish-blue);
+}
+
+main {
+  width: 1180px;
+  height: 695px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+}
+
+.box {
+  margin: 25px;
+  padding: 32px;
+  border-radius: 10px;
+  font-weight: var(--weight-medium);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.box .people {
+  font-size: 15px;
+  font-weight: var(--weight-semibold);
+}
+
+.box .transition {
+  font-size: 19px;
+  font-weight: var(--weight-semibold);
+}
+
+.box .position {
+  font-size: 12.5px;
+  line-height: 19px;
+}
+
+.box1 {
+  grid-area: daniel;
+  background-color: var(--moderate-violet);
+  color: var(--white);
+  position: relative;
+}
+
+.box1 .quote {
+  position: absolute;
+  width: 120px;
+  right: 80px;
+  top: 0px;
+  opacity: 0.5;
+}
+
+.box2 {
+  grid-area: jonathan;
+  background-color: var(--dark-grayish-blue);
+  color: var(--white);
+}
+
+.box3 {
+  grid-area: jeanette;
+  background-color: var(--white);
+}
+
+.box4 {
+  grid-area: patrick;
+  background-color: var(--dark-blackish-blue);
+  color: var(--white);
+}
+
+.box5 {
+  grid-area: kira;
+  background-color: var(--white);
+}
+
+.profile {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-left img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.transition {
+  margin-top: 18px;
+  margin-bottom: 16px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
